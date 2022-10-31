@@ -84,6 +84,16 @@ class Game:
                 if event.key == pygame.K_q:
                     sys.exit()
 
+    def statistics(self):
+        FONT = pygame.font.Font('freesansbold.ttf', 20)
+        text_1 = FONT.render(f'Dinosaurs Alive:  {str(len(self.dinosaurs))}', True, (0, 0, 0))
+        text_2 = FONT.render(f'Generation:  {pop.generation+1}', True, (0, 0, 0))
+        text_3 = FONT.render(f'Game Speed:  {str(self.speed)}', True, (0, 0, 0))
+
+        self.screen.blit(text_1, (50, 50))
+        self.screen.blit(text_2, (50, 480))
+        self.screen.blit(text_3, (50, 510))
+
 
     def update(self):
         self.screen.fill(Settings.BG_COLOUR)
@@ -150,7 +160,6 @@ class Game:
 def eval_genomes(genomes, config):
     game = Game()
     game.play(genomes, config)
-
 
 
 # Setup the NEAT Neural Network

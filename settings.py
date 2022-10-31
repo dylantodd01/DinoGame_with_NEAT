@@ -12,8 +12,8 @@ class Settings:
     BG_COLOUR = (255, 255, 255)
     FPS = 50
     FLOOR_COLOUR = (0, 0, 0)
-    SPEED = 10
-    SPEED_MULTIPLIER = 1.5
+    SPEED = 20
+    SPEED_MULTIPLIER = 1.2
     IMAGE_PATH = os.path.dirname(__file__) + '/images/'
 
     # Dinosaur settings
